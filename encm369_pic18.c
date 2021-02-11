@@ -88,9 +88,10 @@ Promises:
 */
 void GpioSetup(void)
 {
-    TRISA = 0x40; // this is becasue I dont use the Vss port as an output
-    ANSELA = 0x00; // all ports are digital not analog
-    PORTA = 0x80;  //purpose was to turn on RA7
+    TRISA = 0x40;
+    ANSELA = 0x00;
+    PORTA = 0x80;
+   
   
 } /* end GpioSetup() */
 
