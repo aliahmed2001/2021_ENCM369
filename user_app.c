@@ -84,7 +84,7 @@ void UserAppInitialize(void)
         PORTA = 0x80 + i;
         if(i==63)
         {
-            i=0;
+            i=-1;
         }
         __delay_ms(250);
         i++;
