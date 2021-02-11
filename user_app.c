@@ -78,7 +78,7 @@ Promises:
 */
 void UserAppInitialize(void)
 {
-    int i=1;
+    int i=0; // counter will go from 0 to 63
     while(1)
     {
         PORTA = 0x80 + i;
