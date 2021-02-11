@@ -27291,13 +27291,7 @@ void UserAppInitialize(void);
 void UserAppRun(void);
 # 106 "./configuration.h" 2
 # 26 "user_app.c" 2
-
-
-
-
-
-
-
+# 36 "user_app.c"
 volatile u8 G_u8UserAppFlags;
 
 
@@ -27306,13 +27300,23 @@ volatile u8 G_u8UserAppFlags;
 extern volatile u32 G_u32SystemTime1ms;
 extern volatile u32 G_u32SystemTime1s;
 extern volatile u32 G_u32SystemFlags;
-# 76 "user_app.c"
+# 79 "user_app.c"
 void UserAppInitialize(void)
 {
-
+    int i=0;
+    while(1)
+    {
+        PORTA = 0x80 + i;
+        if(i==63)
+        {
+            i=-1;
+        }
+        _delay((unsigned long)((250)*((16000000)/4000.0)));
+        i++;
+    }
 
 }
-# 95 "user_app.c"
+# 108 "user_app.c"
 void UserAppRun(void)
 {
 
