@@ -79,15 +79,15 @@ Promises:
 void UserAppInitialize(void)
 {
     int i=0; // counter will go from 0 to 63
-    while(1)
+    while(1) // never-enfing loop
     {
-        PORTA = 0x80 + i;
-        if(i==63)
+        PORTA = 0x80 + i;  //This causes RA7 to be on and it adds numbers up to 63
+        if(i==63)  //when i == 63, change i to -1, this resets the loop
         {
-            i=-1;
+            i=-1;  //reason its -1 is because it will get incremented and become 0
         }
-        __delay_ms(250);
-        i++;
+        __delay_ms(250);  //delay of 250ms
+        i++;  //the increment I was talking about
     }   
 
 } /* end UserAppInitialize() */
