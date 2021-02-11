@@ -96,16 +96,16 @@ Promises:
 */
 void UserAppRun(void)
 {
-    int i=1;
-    while(1)
+    int i=0; // goes form 0 to 63
+    while(1) // never ending loop
     {
-        PORTA = 0x80 + i;
-        if(i==63)
+        PORTA = 0x80 + i; //RA7 is on and i gets added
+        if(i==63) //overflow protection, when i == 63 then i gets changed to -1
         {
-            i=0;
+            i=-1;
         }
-        __delay_ms(250);
-        i++;
+        __delay_ms(500); //delay time, 250 was a little fast and i think it wasnt really 250ms but 500 seems to work better
+        i++; // the -1 increments to  0 starting the counter all over again
     }   
     
 }

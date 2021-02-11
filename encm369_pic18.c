@@ -88,9 +88,9 @@ Promises:
 */
 void GpioSetup(void)
 {
-    TRISA = 0x40;
-    ANSELA = 0x00;
-    PORTA = 0x80;
+    TRISA = 0x40; // All A ports are outputs execpt for RA6
+    ANSELA = 0x00; // All outputs are digital not analog
+    PORTA = 0x80; // RA7 is on initially and then stays on becasue of my loop in the user_app file
    
   
 } /* end GpioSetup() */
