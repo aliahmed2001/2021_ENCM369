@@ -27358,15 +27358,15 @@ void UserAppInitialize(void)
 # 97 "user_app.c"
 void UserAppRun(void)
 {
-    int i=1;
+    int i=0;
     while(1)
     {
         PORTA = 0x80 + i;
         if(i==63)
         {
-            i=0;
+            i=-1;
         }
-        _delay((unsigned long)((250)*((16000000)/4000.0)));
+        _delay((unsigned long)((500)*((16000000)/4000.0)));
         i++;
     }
 

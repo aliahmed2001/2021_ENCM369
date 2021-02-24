@@ -2615,9 +2615,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _UserAppRun ]
 [f ]
 "99
-[; ;user_app.c: 99:     int i=1;
+[; ;user_app.c: 99:     int i=0;
 [v _i `i ~T0 @X0 1 a ]
-[e = _i -> 1 `i ]
+[e = _i -> 0 `i ]
 "100
 [; ;user_app.c: 100:     while(1)
 [e :U 2275 ]
@@ -2634,15 +2634,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;user_app.c: 104:         {
 {
 "105
-[; ;user_app.c: 105:             i=0;
-[e = _i -> 0 `i ]
+[; ;user_app.c: 105:             i=-1;
+[e = _i -U -> 1 `i ]
 "106
 [; ;user_app.c: 106:         }
 }
 [e :U 2277 ]
 "107
-[; ;user_app.c: 107:         _delay((unsigned long)((250)*((16000000)/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;user_app.c: 107:         _delay((unsigned long)((500)*((16000000)/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "108
 [; ;user_app.c: 108:         i++;
 [e ++ _i -> 1 `i ]
