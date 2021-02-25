@@ -25,6 +25,8 @@ PROTECTED FUNCTIONS
 
 #include "configuration.h"
 
+#define _XTAL_FREQ        (16000000) // 16MHz
+
 /***********************************************************************************************************************
 Global variable definitions with scope across entire project.
 All Global variable names shall start with "G_<type>UserApp1"
@@ -94,9 +96,28 @@ Promises:
 */
 void UserAppRun(void)
 {
+ static u32 i = 0x00;
+ if ((PORTB & 0x20) == 0x20)
+ {
+    __delay_ms(500);
+    if ((PORTB & 0x20) != 0x20) 
+     {
+        if (i == 0xBF) 
+             {
+                i = 0x00;  
+                PORTA = 0x80 + i;
+             }
+            else
+             {
+                i++;   
+                PORTA = 0x80 + i;
+             }
+     }   
+ }
+}
+    
 
-
-} /* end UserAppRun */
+ /* end UserAppRun */
 
 
 

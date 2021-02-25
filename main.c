@@ -4,7 +4,7 @@
 ***********************************************************************************************************************/
 
 #include "configuration.h"
-
+	
 
 /***********************************************************************************************************************
 Global variable definitions with scope across entire project.
@@ -32,7 +32,8 @@ Variable names shall start with "Main_" and be declared as static.
 
 ***********************************************************************************************************************/
 
-void main(void)
+
+void main()
 {
   G_u32SystemFlags |= _SYSTEM_INITIALIZING;
 
@@ -55,14 +56,14 @@ void main(void)
        
     /* Applications */
     UserAppRun();
-   
+  }
      
     /* System sleep */
     HEARTBEAT_OFF();
     SystemSleep();
     HEARTBEAT_ON();
     
-  } /* end while(1) main super loop */
+   /* end while(1) main super loop */
   
 } /* end main() */
 
