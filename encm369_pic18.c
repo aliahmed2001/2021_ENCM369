@@ -88,11 +88,11 @@ Promises:
 */
 void GpioSetup(void)
 {
-    TRISA = 0x40;
-    TRISB = 0x20;
-    ANSELA = 0x00;
-    ANSELB = 0x00;
-    PORTA = 0x80;
+    TRISA = 0x40; // making PORTA outputs execpt RA6 since we dont use it
+    TRISB = 0x20; // making RB5 an input
+    ANSELA = 0x00; // setting PORTA to digital
+    ANSELB = 0x00; // Setting PORTB to digital
+    PORTA = 0x80; //Turing RA7 on 
     
    
   

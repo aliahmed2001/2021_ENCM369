@@ -96,21 +96,21 @@ Promises:
 */
 void UserAppRun(void)
 {
- static u32 i = 0x00;
- if ((PORTB & 0x20) == 0x20)
+ static u32 i = 0x00; // setting varibale i as the variable that will be incremented
+ if ((PORTB & 0x20) == 0x20)  // pressing button
  {
-    __delay_ms(500);
-    if ((PORTB & 0x20) != 0x20) 
+    __delay_ms(500); // waiting half second
+    if ((PORTB & 0x20) != 0x20) // checking if the button is released
      {
-        if (i == 0xBF) 
+        if (i == 0xBF) // if i is at 63 then change i to 0
              {
                 i = 0x00;  
-                PORTA = 0x80 + i;
+                PORTA = 0x80 + i; //i is 0 but RA7 is not part of the counter so it always stays on
              }
             else
              {
-                i++;   
-                PORTA = 0x80 + i;
+                i++; // incrementing i   
+                PORTA = 0x80 + i;  // RA7 is not part of the counter so it always stays on
              }
      }   
  }
