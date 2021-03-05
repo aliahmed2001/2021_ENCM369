@@ -77,11 +77,46 @@ Promises:
 */
 void UserAppInitialize(void)
 {
-
-
+    /* LED initialization */
+    LATA = 0x80;
+    
+    /* Timer0 control register initialization to turn timer on, asynchronous mode, 16 bit
+     * Fosc/4, 1:16 pre-scaler, 1:1post-scaler */
+    T0CON0 = 0x90;
+    T0CON1 = 0x54;
+    
 } /* end UserAppInitialize() */
 
-  
+/*---------------------------------------------------------------------------------------------------------------------
+ void TimeXus(u16 u16Microseconds)
+ Sets Timer0 to count u16Microseconds
+ 
+ Requires:
+ - Timer0 configured such that each timer tick is 1 microsecond
+ - u16Microseconds is the value in microseconds to time from 1 to 65535
+ 
+ Promises:
+ - Pre-loads TMr0H:L to clock out desired period
+ - TMR0IF cleared
+ - Timer0 enabled
+ */
+
+void TimeXus(u16 u16s)
+{
+    /*Disabling the Timer*/
+    T0CON0 &= 0x7f;
+    
+    /*Pre-loading TMR0H and TMROL*/
+    u16 u16t = 0xffff - u16s;
+    TMR0L = u16t & 0x00ff;
+    TMR0H = (u8) ( (u16t & 0xff00) >> 8 );
+    
+    /*Clearing TMR0IF*/
+    PIR3 &= 0x7f;
+    
+    /*Enabling Timer*/
+    T0CON0 |= 0x80;
+}  
 /*!----------------------------------------------------------------------------------------------------------------------
 @fn void UserAppRun(void)
 
@@ -92,23 +127,39 @@ Requires:
 
 Promises:
 - 
-
+ 
 */
 void UserAppRun(void)
 {
-    int i=0; // goes form 0 to 63
-    while(1) // never ending loop
-    {
-        PORTA = 0x80 + i; //RA7 is on and i gets added
-        if(i==63) //overflow protection, when i == 63 then i gets changed to -1
-        {
-            i=-1;
-        }
-        __delay_ms(500); //delay time, 250 was a little fast and i think it wasnt really 250ms but 500 seems to work better
-        i++; // the -1 increments to  0 starting the counter all over again
-    }   
+    static u16 u16Del = 0;
     
-}
+    /*variable used to index array*/
+    static int LightOn = 0;
+    
+    u8 au8Pattern [5] = {0x21, 0x12, 0x84, 0x12, 0x21};
+    u16Del++;
+    
+    /*After 250ms delay the pattern changes*/
+    if(u16Del == 250)
+    {
+       u16Del = 0;
+       u8 u8Temporary = LATA;
+       
+       /*Clearing 6 LSB's*/
+       u8Temporary &= 0x80;
+       
+       /*Updating LATA to display next pattern*/
+       u8Temporary |= au8Pattern[LightOn];
+       LATA = u8Temporary;
+       LightOn++;
+       
+       /*Resets pattern to start repeating*/
+       if(LightOn == 5)
+       {
+           LightOn = 0;
+       }
+    }
+} /* end UserAppRun */
 
  /* end UserAppRun */
 

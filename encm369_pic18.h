@@ -41,7 +41,7 @@ Type Definitions
 /***********************************************************************************************************************
 * Macros
 ***********************************************************************************************************************/
-#define HEARTBEAT_ON()          /*!< @brief Turns on Heartbeat LED */
+#define HEARTBEAT_ON()         /*!< @brief Turns on Heartbeat LED */
 #define HEARTBEAT_OFF()         /*!< @brief Turns off Heartbeat LED */
 
 
