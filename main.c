@@ -2,7 +2,6 @@
 @file main.c                                                                
 @brief Main system file for the ENCM 369 firmware.  
 ***********************************************************************************************************************/
-
 #include "configuration.h"
 	
 

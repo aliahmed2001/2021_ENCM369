@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2_31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/debug\2021_ENCM369.debug.sym \
   --cmf=dist/default/debug\2021_ENCM369.debug.cmf -z -Q18F27Q43 \
-  -oC:\Users\14038\AppData\Local\Temp\s8lk.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\14038\AppData\Local\Temp\sn6k.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/debug/2021_ENCM369.debug.map -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ASTACK=0560h-025FFh -pstack=STACK -ACODE=00h-01FFFFh \
   -ACONST=00h-01FFFFh -ASMALLCONST=02600h-026FFhx474 \
@@ -31,7 +31,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\14038\AppData\Local\Temp\s8lk.o \
+  C:\Users\14038\AppData\Local\Temp\sn6k.o \
   dist/default/debug\2021_ENCM369.debug.o 
 
 Object code version is 3.11
@@ -41,7 +41,7 @@ Machine type is 18F27Q43
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\14038\AppData\Local\Temp\s8lk.o
+C:\Users\14038\AppData\Local\Temp\sn6k.o
                 idloc                            200000   200000       20        0       5
                 config                           300000   300000        A        0       4
                 init                              1FFFC    1FFFC        4     FFFE       0
@@ -518,7 +518,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 36 in file "main.c"
+		line 35 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -553,7 +553,7 @@ Total ram usage:        0 bytes
 
  *************** function _UserAppRun *****************
  Defined at:
-		line 132 in file "user_app.c"
+		line 128 in file "user_app.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -612,7 +612,7 @@ Total ram usage:        0 bytes
 
  *************** function _TimeXus *****************
  Defined at:
-		line 104 in file "user_app.c"
+		line 100 in file "user_app.c"
  Parameters:    Size  Location     Type
   u16s            2    0[COMRAM] unsigned short 
  Auto vars:     Size  Location     Type

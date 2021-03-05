@@ -27338,6 +27338,7 @@ void SystemSleep(void);
 # 27 "./user_app.h"
 void UserAppInitialize(void);
 void UserAppRun(void);
+void TimeXus (u16 u16Microseconds);
 # 158 "./configuration.h" 2
 # 26 "user_app.c" 2
 # 35 "user_app.c"
@@ -27352,22 +27353,52 @@ extern volatile u32 G_u32SystemFlags;
 # 78 "user_app.c"
 void UserAppInitialize(void)
 {
-
+    LATA = 0x80;
+    T0CON0 = 0x90;
+    T0CON1 = 0x54;
 
 }
-# 97 "user_app.c"
+# 100 "user_app.c"
+void TimeXus(u16 u16s)
+{
+
+    T0CON0 &= 0x7f;
+
+
+    u16 u16t = 0xffff - u16s;
+    TMR0L = u16t & 0x00ff;
+    TMR0H = (u8) ( (u16t & 0xff00) >> 8 );
+
+
+    PIR3 &= 0x7f;
+
+
+    T0CON0 |= 0x80;
+}
+# 128 "user_app.c"
 void UserAppRun(void)
 {
-    int i=0;
-    while(1)
-    {
-        PORTA = 0x80 + i;
-        if(i==63)
-        {
-            i=-1;
-        }
-        _delay((unsigned long)((500)*((16000000)/4000.0)));
-        i++;
-    }
+    static u16 u16Del = 0;
 
+    static int LightOn = 0;
+
+    u8 au8Pattern [5] = {0x21, 0x12, 0x0c, 0x12, 0x21};
+    u16Del++;
+
+    if(u16Del == 250)
+    {
+       u16Del = 0;
+       u8 u8Temporary = LATA;
+
+       u8Temporary &= 0x80;
+
+       u8Temporary |= au8Pattern[LightOn];
+       LATA = u8Temporary;
+       LightOn++;
+
+       if(LightOn == 5)
+       {
+           LightOn = 0;
+       }
+    }
 }

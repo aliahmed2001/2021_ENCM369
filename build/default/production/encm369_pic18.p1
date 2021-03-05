@@ -2620,8 +2620,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _GpioSetup ]
 [f ]
 "91
-[; ;encm369_pic18.c: 91:     TRISA = 0x40;
-[e = _TRISA -> -> 64 `i `uc ]
+[; ;encm369_pic18.c: 91:     TRISA = 0x00;
+[e = _TRISA -> -> 0 `i `uc ]
 "92
 [; ;encm369_pic18.c: 92:     ANSELA = 0x00;
 [e = _ANSELA -> -> 0 `i `uc ]

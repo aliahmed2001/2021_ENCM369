@@ -27353,16 +27353,12 @@ extern volatile u32 G_u32SystemFlags;
 # 78 "user_app.c"
 void UserAppInitialize(void)
 {
-
     LATA = 0x80;
-
-
-
     T0CON0 = 0x90;
     T0CON1 = 0x54;
 
 }
-# 104 "user_app.c"
+# 100 "user_app.c"
 void TimeXus(u16 u16s)
 {
 
@@ -27379,31 +27375,26 @@ void TimeXus(u16 u16s)
 
     T0CON0 |= 0x80;
 }
-# 132 "user_app.c"
+# 128 "user_app.c"
 void UserAppRun(void)
 {
     static u16 u16Del = 0;
 
-
     static int LightOn = 0;
 
-    u8 au8Pattern [5] = {0x21, 0x12, 0x84, 0x12, 0x21};
+    u8 au8Pattern [5] = {0x21, 0x12, 0x0c, 0x12};
     u16Del++;
-
 
     if(u16Del == 250)
     {
        u16Del = 0;
        u8 u8Temporary = LATA;
 
-
        u8Temporary &= 0x80;
-
 
        u8Temporary |= au8Pattern[LightOn];
        LATA = u8Temporary;
        LightOn++;
-
 
        if(LightOn == 5)
        {

@@ -11,7 +11,6 @@
 
 
 
-
 # 1 "./configuration.h" 1
 # 25 "./configuration.h"
 #pragma config FEXTOSC = OFF
@@ -27342,8 +27341,9 @@ void SystemSleep(void);
 # 27 "./user_app.h"
 void UserAppInitialize(void);
 void UserAppRun(void);
+void TimeXus (u16 u16Microseconds);
 # 158 "./configuration.h" 2
-# 6 "main.c" 2
+# 5 "main.c" 2
 
 
 
@@ -27355,7 +27355,7 @@ void UserAppRun(void);
 volatile u32 G_u32SystemTime1ms = 0;
 volatile u32 G_u32SystemTime1s = 0;
 volatile u32 G_u32SystemFlags = 0;
-# 36 "main.c"
+# 35 "main.c"
 void main()
 {
   G_u32SystemFlags |= (u32)0x80000000;
@@ -27379,13 +27379,15 @@ void main()
 
 
     UserAppRun();
-  }
+
 
 
                    ;
     SystemSleep();
+    TimeXus(1000);
+    while( (PIR3 & 0x80) == 0x00);
                   ;
 
-
+  }
 
 }

@@ -2613,71 +2613,71 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _UserAppInitialize ]
 [f ]
-"81
-[; ;user_app.c: 81:     LATA = 0x80;
+"80
+[; ;user_app.c: 80:     LATA = 0x80;
 [e = _LATA -> -> 128 `i `uc ]
-"85
-[; ;user_app.c: 85:     T0CON0 = 0x90;
+"81
+[; ;user_app.c: 81:     T0CON0 = 0x90;
 [e = _T0CON0 -> -> 144 `i `uc ]
-"86
-[; ;user_app.c: 86:     T0CON1 = 0x54;
+"82
+[; ;user_app.c: 82:     T0CON1 = 0x54;
 [e = _T0CON1 -> -> 84 `i `uc ]
-"88
-[; ;user_app.c: 88: }
+"84
+[; ;user_app.c: 84: }
 [e :UE 2272 ]
 }
-"104
-[; ;user_app.c: 104: void TimeXus(u16 u16s)
+"100
+[; ;user_app.c: 100: void TimeXus(u16 u16s)
 [v _TimeXus `(v ~T0 @X0 1 ef1`us ]
-"105
-[; ;user_app.c: 105: {
+"101
+[; ;user_app.c: 101: {
 {
 [e :U _TimeXus ]
-"104
-[; ;user_app.c: 104: void TimeXus(u16 u16s)
+"100
+[; ;user_app.c: 100: void TimeXus(u16 u16s)
 [v _u16s `us ~T0 @X0 1 r1 ]
-"105
-[; ;user_app.c: 105: {
+"101
+[; ;user_app.c: 101: {
 [f ]
-"107
-[; ;user_app.c: 107:     T0CON0 &= 0x7f;
+"103
+[; ;user_app.c: 103:     T0CON0 &= 0x7f;
 [e =& _T0CON0 -> -> 127 `i `Vuc ]
-"110
-[; ;user_app.c: 110:     u16 u16t = 0xffff - u16s;
+"106
+[; ;user_app.c: 106:     u16 u16t = 0xffff - u16s;
 [v _u16t `us ~T0 @X0 1 a ]
 [e = _u16t -> - -> 65535 `ui -> _u16s `ui `us ]
-"111
-[; ;user_app.c: 111:     TMR0L = u16t & 0x00ff;
+"107
+[; ;user_app.c: 107:     TMR0L = u16t & 0x00ff;
 [e = _TMR0L -> & -> _u16t `ui -> -> 255 `i `ui `uc ]
-"112
-[; ;user_app.c: 112:     TMR0H = (u8) ( (u16t & 0xff00) >> 8 );
+"108
+[; ;user_app.c: 108:     TMR0H = (u8) ( (u16t & 0xff00) >> 8 );
 [e = _TMR0H -> >> & -> _u16t `ui -> 65280 `ui -> 8 `i `uc ]
-"115
-[; ;user_app.c: 115:     PIR3 &= 0x7f;
+"111
+[; ;user_app.c: 111:     PIR3 &= 0x7f;
 [e =& _PIR3 -> -> 127 `i `Vuc ]
-"118
-[; ;user_app.c: 118:     T0CON0 |= 0x80;
+"114
+[; ;user_app.c: 114:     T0CON0 |= 0x80;
 [e =| _T0CON0 -> -> 128 `i `Vuc ]
-"119
-[; ;user_app.c: 119: }
+"115
+[; ;user_app.c: 115: }
 [e :UE 2273 ]
 }
-"132
-[; ;user_app.c: 132: void UserAppRun(void)
+"128
+[; ;user_app.c: 128: void UserAppRun(void)
 [v _UserAppRun `(v ~T0 @X0 1 ef ]
-"133
-[; ;user_app.c: 133: {
+"129
+[; ;user_app.c: 129: {
 {
 [e :U _UserAppRun ]
 [f ]
-"134
-[; ;user_app.c: 134:     static u16 u16Del = 0;
+"130
+[; ;user_app.c: 130:     static u16 u16Del = 0;
 [v F15925 `us ~T0 @X0 1 s u16Del ]
 [i F15925
 -> -> 0 `i `us
 ]
-"137
-[; ;user_app.c: 137:     static int LightOn = 0;
+"132
+[; ;user_app.c: 132:     static int LightOn = 0;
 [v F15926 `i ~T0 @X0 1 s LightOn ]
 [i F15926
 -> 0 `i
@@ -2685,63 +2685,62 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F15927 `uc ~T0 @X0 -> 5 `i s ]
 [i F15927
 :U ..
-"139
-[; ;user_app.c: 139:     u8 au8Pattern [5] = {0x21, 0x12, 0x84, 0x12, 0x21};
+"134
+[; ;user_app.c: 134:     u8 au8Pattern [5] = {0x21, 0x12, 0x0c, 0x12};
 -> -> 33 `i `uc
 -> -> 18 `i `uc
--> -> 132 `i `uc
+-> -> 12 `i `uc
 -> -> 18 `i `uc
--> -> 33 `i `uc
 ..
 ]
 [v _au8Pattern `uc ~T0 @X0 -> 5 `i a ]
 [e = _au8Pattern F15927 ]
-"140
-[; ;user_app.c: 140:     u16Del++;
+"135
+[; ;user_app.c: 135:     u16Del++;
 [e ++ F15925 -> -> 1 `i `us ]
-"143
-[; ;user_app.c: 143:     if(u16Del == 250)
+"137
+[; ;user_app.c: 137:     if(u16Del == 250)
 [e $ ! == -> F15925 `ui -> -> 250 `i `ui 2275  ]
-"144
-[; ;user_app.c: 144:     {
+"138
+[; ;user_app.c: 138:     {
 {
-"145
-[; ;user_app.c: 145:        u16Del = 0;
+"139
+[; ;user_app.c: 139:        u16Del = 0;
 [e = F15925 -> -> 0 `i `us ]
-"146
-[; ;user_app.c: 146:        u8 u8Temporary = LATA;
+"140
+[; ;user_app.c: 140:        u8 u8Temporary = LATA;
 [v _u8Temporary `uc ~T0 @X0 1 a ]
 [e = _u8Temporary _LATA ]
-"149
-[; ;user_app.c: 149:        u8Temporary &= 0x80;
+"142
+[; ;user_app.c: 142:        u8Temporary &= 0x80;
 [e =& _u8Temporary -> -> 128 `i `uc ]
-"152
-[; ;user_app.c: 152:        u8Temporary |= au8Pattern[LightOn];
+"144
+[; ;user_app.c: 144:        u8Temporary |= au8Pattern[LightOn];
 [e =| _u8Temporary -> *U + &U _au8Pattern * -> -> F15926 `ui `ux -> -> # *U &U _au8Pattern `ui `ux `uc ]
-"153
-[; ;user_app.c: 153:        LATA = u8Temporary;
+"145
+[; ;user_app.c: 145:        LATA = u8Temporary;
 [e = _LATA _u8Temporary ]
-"154
-[; ;user_app.c: 154:        LightOn++;
+"146
+[; ;user_app.c: 146:        LightOn++;
 [e ++ F15926 -> 1 `i ]
-"157
-[; ;user_app.c: 157:        if(LightOn == 5)
+"148
+[; ;user_app.c: 148:        if(LightOn == 5)
 [e $ ! == F15926 -> 5 `i 2276  ]
-"158
-[; ;user_app.c: 158:        {
+"149
+[; ;user_app.c: 149:        {
 {
-"159
-[; ;user_app.c: 159:            LightOn = 0;
+"150
+[; ;user_app.c: 150:            LightOn = 0;
 [e = F15926 -> 0 `i ]
-"160
-[; ;user_app.c: 160:        }
+"151
+[; ;user_app.c: 151:        }
 }
 [e :U 2276 ]
-"161
-[; ;user_app.c: 161:     }
+"152
+[; ;user_app.c: 152:     }
 }
 [e :U 2275 ]
-"162
-[; ;user_app.c: 162: }
+"153
+[; ;user_app.c: 153: }
 [e :UE 2274 ]
 }

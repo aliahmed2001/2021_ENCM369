@@ -77,11 +77,7 @@ Promises:
 */
 void UserAppInitialize(void)
 {
-    /* LED initialization */
     LATA = 0x80;
-    
-    /* Timer0 control register initialization to turn timer on, asynchronous mode, 16 bit
-     * Fosc/4, 1:16 pre-scaler, 1:1post-scaler */
     T0CON0 = 0x90;
     T0CON1 = 0x54;
     
@@ -133,27 +129,22 @@ void UserAppRun(void)
 {
     static u16 u16Del = 0;
     
-    /*variable used to index array*/
     static int LightOn = 0;
     
-    u8 au8Pattern [5] = {0x21, 0x12, 0x84, 0x12, 0x21};
+    u8 au8Pattern [5] = {0x21, 0x12, 0x0c, 0x12};
     u16Del++;
     
-    /*After 250ms delay the pattern changes*/
     if(u16Del == 250)
     {
        u16Del = 0;
        u8 u8Temporary = LATA;
        
-       /*Clearing 6 LSB's*/
        u8Temporary &= 0x80;
        
-       /*Updating LATA to display next pattern*/
        u8Temporary |= au8Pattern[LightOn];
        LATA = u8Temporary;
        LightOn++;
        
-       /*Resets pattern to start repeating*/
        if(LightOn == 5)
        {
            LightOn = 0;
@@ -161,7 +152,6 @@ void UserAppRun(void)
     }
 } /* end UserAppRun */
 
- /* end UserAppRun */
 
 
 
