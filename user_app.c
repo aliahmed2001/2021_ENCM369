@@ -77,9 +77,9 @@ Promises:
 */
 void UserAppInitialize(void)
 {
-    LATA = 0x80;
-    T0CON0 = 0x90;
-    T0CON1 = 0x54;
+    LATA = 0x80; //RA7 is on
+    T0CON0 = 0x90; //enabled timer0
+    T0CON1 = 0x54; //setting timer0 to asynchronous
     
 } /* end UserAppInitialize() */
 
@@ -131,21 +131,21 @@ void UserAppRun(void)
     
     static int LightOn = 0;
     
-    u8 au8Pattern [5] = {0x21, 0x12, 0x0c, 0x12};
-    u16Del++;
+    u8 au8Pattern [5] = {0x21, 0x12, 0x0c, 0x12, 0x21}; // pattern displayed on LEDs
+    u16Del++; // increments u16Del
     
-    if(u16Del == 250)
+    if(u16Del == 250) // after 250ms the pattern changes
     {
        u16Del = 0;
        u8 u8Temporary = LATA;
        
        u8Temporary &= 0x80;
        
-       u8Temporary |= au8Pattern[LightOn];
+       u8Temporary |= au8Pattern[LightOn]; // LATA is gonna display the new pattern
        LATA = u8Temporary;
-       LightOn++;
+       LightOn++; 
        
-       if(LightOn == 5)
+       if(LightOn == 5) //resets pattern back to the stating point
        {
            LightOn = 0;
        }
