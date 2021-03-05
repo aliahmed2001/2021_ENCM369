@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Fri Mar 05 01:06:33 2021
+                                                                                               Fri Mar 05 01:43:51 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	18F27Q43
@@ -79,7 +79,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
     65  01FEB8  12                 	db	18
     66  01FEB9  0C                 	db	12
     67  01FEBA  12                 	db	18
-    68  01FEBB  00                 	db	0
+    68  01FEBB  21                 	db	33
     69  0000                     _TMR0H	set	793
     70  0000                     _TMR0L	set	792
     71  0000                     _T0CON1	set	795
@@ -323,7 +323,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    289                           	callstack 127
    290  01FF88                     
    291                           ;user_app.c: 130:     static u16 u16Del = 0;;user_app.c: 132:     static int LightOn = 0
-      +                          ;;user_app.c: 134:     u8 au8Pattern [5] = {0x21, 0x12, 0x0c, 0x12};
+      +                          ;;user_app.c: 134:     u8 au8Pattern [5] = {0x21, 0x12, 0x0c, 0x12, 0x21};
    292  01FF88  EE21  F118         	lfsr	2,UserAppRun@F15927
    293  01FF8C  EE11  F112         	lfsr	1,UserAppRun@au8Pattern
    294  01FF90  0E04               	movlw	4
@@ -1319,7 +1319,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Fri Mar 05 01:06:33 2021
+Symbol Table                                                                                   Fri Mar 05 01:43:51 2021
 
      __size_of_SysTickSetup 0022                          l13 FEB2                          l22 FEB4  
                         l16 FECA                          l50 FF72                          l19 FF18  

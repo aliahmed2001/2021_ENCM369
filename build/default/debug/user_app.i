@@ -27338,7 +27338,7 @@ void SystemSleep(void);
 # 27 "./user_app.h"
 void UserAppInitialize(void);
 void UserAppRun(void);
-void TimeXus (u16 u16Microseconds);
+void TimeXus (u16 u16s);
 # 158 "./configuration.h" 2
 # 26 "user_app.c" 2
 # 35 "user_app.c"
@@ -27382,7 +27382,7 @@ void UserAppRun(void)
 
     static int LightOn = 0;
 
-    u8 au8Pattern [5] = {0x21, 0x12, 0x0c, 0x12};
+    u8 au8Pattern [5] = {0x21, 0x12, 0x0c, 0x12, 0x21};
     u16Del++;
 
     if(u16Del == 250)

@@ -27,7 +27,7 @@ cstackCOMRAM COMRAM 1 512 512 6 1
 dataCOMRAM COMRAM 1 518 518 5 1
 bssCOMRAM COMRAM 1 501 501 11 1
 config CONFIG 4 300000 300000 A 1
-$C:\Users\14038\AppData\Local\Temp\sn6k.o
+$C:\Users\14038\AppData\Local\Temp\s9pc.o
 idloc IDLOC 5 200000 200000 20 1
 init CODE 0 1FFFC 1FFFC 4 1
 reset_vec CODE 0 0 0 4 1
@@ -150,32 +150,32 @@ $dist/default/debug\2021_ENCM369.debug.o
 1FF62 text0 CODE >62:C:\Github\2021_ENCM369\main.c
 1FF66 text0 CODE >63:C:\Github\2021_ENCM369\main.c
 1FF72 text0 CODE >64:C:\Github\2021_ENCM369\main.c
-1FF1A cinit CODE >5109:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF1A cinit CODE >5111:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF1A cinit CODE >5114:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF1A cinit CODE >5148:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF1C cinit CODE >5149:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF1E cinit CODE >5150:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF20 cinit CODE >5151:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF22 cinit CODE >5152:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF24 cinit CODE >5153:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF26 cinit CODE >5154:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF2A cinit CODE >5155:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF2E cinit CODE >5156:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF2E cinit CODE >5157:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF30 cinit CODE >5158:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF34 cinit CODE >5159:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF36 cinit CODE >5160:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF38 cinit CODE >5161:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF3A cinit CODE >5165:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF3E cinit CODE >5166:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF40 cinit CODE >5167:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF40 cinit CODE >5168:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF42 cinit CODE >5169:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF44 cinit CODE >5170:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF46 cinit CODE >5176:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF46 cinit CODE >5178:C:\Users\14038\AppData\Local\Temp\sn6k.s
-1FF48 cinit CODE >5179:C:\Users\14038\AppData\Local\Temp\sn6k.s
+1FF1A cinit CODE >5109:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF1A cinit CODE >5111:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF1A cinit CODE >5114:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF1A cinit CODE >5148:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF1C cinit CODE >5149:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF1E cinit CODE >5150:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF20 cinit CODE >5151:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF22 cinit CODE >5152:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF24 cinit CODE >5153:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF26 cinit CODE >5154:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF2A cinit CODE >5155:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF2E cinit CODE >5156:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF2E cinit CODE >5157:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF30 cinit CODE >5158:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF34 cinit CODE >5159:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF36 cinit CODE >5160:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF38 cinit CODE >5161:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF3A cinit CODE >5165:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF3E cinit CODE >5166:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF40 cinit CODE >5167:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF40 cinit CODE >5168:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF42 cinit CODE >5169:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF44 cinit CODE >5170:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF46 cinit CODE >5176:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF46 cinit CODE >5178:C:\Users\14038\AppData\Local\Temp\s9pc.s
+1FF48 cinit CODE >5179:C:\Users\14038\AppData\Local\Temp\s9pc.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -194,25 +194,25 @@ __Hspace_1 51D 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 __Hspace_2 0 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\2021_ENCM369.debug.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\14038\AppData\Local\Temp\sn6k.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\14038\AppData\Local\Temp\s9pc.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\2021_ENCM369.debug.o
 __end_of_TimeXus 1FEF8 0 CODE 0 text3 dist/default/debug\2021_ENCM369.debug.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\2021_ENCM369.debug.o
 _LATA 4BE 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 _PIR3 4B1 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
-___sp 0 0 STACK 2 stack C:\Users\14038\AppData\Local\Temp\sn6k.o
+___sp 0 0 STACK 2 stack C:\Users\14038\AppData\Local\Temp\s9pc.o
 _main 1FF4C 0 CODE 0 text0 dist/default/debug\2021_ENCM369.debug.o
-start 1FFFC 0 CODE 0 init C:\Users\14038\AppData\Local\Temp\sn6k.o
+start 1FFFC 0 CODE 0 init C:\Users\14038\AppData\Local\Temp\s9pc.o
 __size_of_main 0 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\2021_ENCM369.debug.o
 __size_of_SystemSleep 0 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/debug\2021_ENCM369.debug.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\2021_ENCM369.debug.o
-__accesstop 560 0 ABS 0 - C:\Users\14038\AppData\Local\Temp\sn6k.o
-intlevel0 0 0 CODE 0 text C:\Users\14038\AppData\Local\Temp\sn6k.o
-intlevel1 0 0 CODE 0 text C:\Users\14038\AppData\Local\Temp\sn6k.o
-intlevel2 0 0 CODE 0 text C:\Users\14038\AppData\Local\Temp\sn6k.o
-intlevel3 0 0 CODE 0 text C:\Users\14038\AppData\Local\Temp\sn6k.o
+__accesstop 560 0 ABS 0 - C:\Users\14038\AppData\Local\Temp\s9pc.o
+intlevel0 0 0 CODE 0 text C:\Users\14038\AppData\Local\Temp\s9pc.o
+intlevel1 0 0 CODE 0 text C:\Users\14038\AppData\Local\Temp\s9pc.o
+intlevel2 0 0 CODE 0 text C:\Users\14038\AppData\Local\Temp\s9pc.o
+intlevel3 0 0 CODE 0 text C:\Users\14038\AppData\Local\Temp\s9pc.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\2021_ENCM369.debug.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\2021_ENCM369.debug.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/debug\2021_ENCM369.debug.o
@@ -221,8 +221,8 @@ __pidataCOMRAM 1FEB7 0 CODE 0 idataCOMRAM dist/default/debug\2021_ENCM369.debug.
 _UserAppRun 1FF88 0 CODE 0 text1 dist/default/debug\2021_ENCM369.debug.o
 _ANSELA 400 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 _G_u32SystemTime1s 505 0 COMRAM 1 bssCOMRAM dist/default/debug\2021_ENCM369.debug.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\14038\AppData\Local\Temp\sn6k.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\14038\AppData\Local\Temp\sn6k.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\14038\AppData\Local\Temp\s9pc.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\14038\AppData\Local\Temp\s9pc.o
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\2021_ENCM369.debug.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\2021_ENCM369.debug.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug\2021_ENCM369.debug.o
@@ -291,7 +291,7 @@ __Hbank36 0 0 ABS 0 bank36 dist/default/debug\2021_ENCM369.debug.o
 __Hbank37 0 0 ABS 0 bank37 dist/default/debug\2021_ENCM369.debug.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\2021_ENCM369.debug.o
 __Hbigram 0 0 ABS 0 bigram dist/default/debug\2021_ENCM369.debug.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\14038\AppData\Local\Temp\sn6k.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\14038\AppData\Local\Temp\s9pc.o
 _SystemSleep 1FEB4 0 CODE 0 text4 dist/default/debug\2021_ENCM369.debug.o
 __Hcomram 0 0 ABS 0 comram dist/default/debug\2021_ENCM369.debug.o
 __Hconfig 30000A 0 CONFIG 4 config dist/default/debug\2021_ENCM369.debug.o
@@ -387,8 +387,8 @@ __end_of_SysTickSetup 1FF1A 0 CODE 0 text5 dist/default/debug\2021_ENCM369.debug
 _UserAppInitialize 1FECC 0 CODE 0 text2 dist/default/debug\2021_ENCM369.debug.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/debug\2021_ENCM369.debug.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/debug\2021_ENCM369.debug.o
-stackhi 25FF 0 ABS 0 - C:\Users\14038\AppData\Local\Temp\sn6k.o
-stacklo 560 0 ABS 0 - C:\Users\14038\AppData\Local\Temp\sn6k.o
+stackhi 25FF 0 ABS 0 - C:\Users\14038\AppData\Local\Temp\s9pc.o
+stacklo 560 0 ABS 0 - C:\Users\14038\AppData\Local\Temp\s9pc.o
 __Lirdata 0 0 CODE 0 irdata dist/default/debug\2021_ENCM369.debug.o
 __Lspace_0 0 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
 __Lspace_1 0 0 ABS 0 - dist/default/debug\2021_ENCM369.debug.o
@@ -412,7 +412,7 @@ __ptext5 1FEF8 0 CODE 0 text5 dist/default/debug\2021_ENCM369.debug.o
 __ptext6 1FEBC 0 CODE 0 text6 dist/default/debug\2021_ENCM369.debug.o
 __ptext7 1FEB2 0 CODE 0 text7 dist/default/debug\2021_ENCM369.debug.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/debug\2021_ENCM369.debug.o
-__ramtop 2600 0 RAM 0 ramtop C:\Users\14038\AppData\Local\Temp\sn6k.o
+__ramtop 2600 0 RAM 0 ramtop C:\Users\14038\AppData\Local\Temp\s9pc.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/debug\2021_ENCM369.debug.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\2021_ENCM369.debug.o
 UserAppRun@u16Del 50F 0 COMRAM 1 bssCOMRAM dist/default/debug\2021_ENCM369.debug.o

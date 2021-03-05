@@ -2686,11 +2686,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i F15927
 :U ..
 "134
-[; ;user_app.c: 134:     u8 au8Pattern [5] = {0x21, 0x12, 0x0c, 0x12};
+[; ;user_app.c: 134:     u8 au8Pattern [5] = {0x21, 0x12, 0x0c, 0x12, 0x21};
 -> -> 33 `i `uc
 -> -> 18 `i `uc
 -> -> 12 `i `uc
 -> -> 18 `i `uc
+-> -> 33 `i `uc
 ..
 ]
 [v _au8Pattern `uc ~T0 @X0 -> 5 `i a ]
