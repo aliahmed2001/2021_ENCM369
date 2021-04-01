@@ -11,9 +11,9 @@ Global variable definitions with scope across entire project.
 All Global variable names shall start with "G_"
 ***********************************************************************************************************************/
 /* New variables */
-volatile u32 G_u32SystemTime1ms = 0;     /*!< @brief Global system time incremented every ms, max 2^32 (~49 days) */
-volatile u32 G_u32SystemTime1s  = 0;     /*!< @brief Global system time incremented every second, max 2^32 (~136 years) */
-volatile u32 G_u32SystemFlags   = 0;     /*!< @brief Global system flags */
+volatile u32 G_u32SystemTime1ms = 0;     
+volatile u32 G_u32SystemTime1s  = 0;     
+volatile u32 G_u32SystemFlags   = 0;     
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* External global variables defined in other files (must indicate which file they are defined in) */
@@ -36,27 +36,16 @@ void main(void)
 {
   G_u32SystemFlags |= _SYSTEM_INITIALIZING;
 
-  /* Low level initialization */
   ClockSetup();
   SysTickSetup();
   GpioSetup();
   
-  /* Driver initialization */
- 
-  /* Application initialization */
   UserAppInitialize();
-  
-  /* Exit initialization */
-    
-  /* Super loop */  
+
   while(1)
   {
-    /* Drivers */
-     
-    /* Applications */
     UserAppRun();
 #if 1
-    /* System sleep */
     HEARTBEAT_OFF();
     SystemSleep();
     
@@ -64,7 +53,7 @@ void main(void)
     while ( PIR3bits.TMR0IF == 0);  
     HEARTBEAT_ON();
 #endif
-  } /* end while(1) main super loop */
+  } 
   
 } /* end main() */
 

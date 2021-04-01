@@ -33,10 +33,10 @@ All Global variable names shall start with "G_xxBsp"
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-/* Existing variables (defined in other files -- should all contain the "extern" keyword) */
-extern volatile u32 G_u32SystemTime1ms;        /*!< @brief From main.c */
-extern volatile u32 G_u32SystemTime1s;         /*!< @brief From main.c */
-extern volatile u32 G_u32SystemFlags;          /*!< @brief From main.c */
+
+extern volatile u32 G_u32SystemTime1ms;      
+extern volatile u32 G_u32SystemTime1s;         
+extern volatile u32 G_u32SystemFlags;          
 
 /***********************************************************************************************************************
 Global variable definitions with scope limited to this local application.
@@ -89,10 +89,10 @@ Promises:
 */
 void GpioSetup(void)
 {
-    ANSELA = 0x00; //Setting up RA0-7 as digital IO
-    TRISA = 0x00; //Setting RA0-7 to be outputs
+    ANSELA = 0x00; 
+    TRISA = 0x00; 
 
-    DAC1CON = 0xA0; //Enabling DAC1 output on RA2, Vdd +ref., Vss -ref.
+    DAC1CON = 0xA0; 
 } /* end GpioSetup() */
 
 

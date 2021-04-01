@@ -30,14 +30,14 @@ Global variable definitions with scope across entire project.
 All Global variable names shall start with "G_<type>UserApp1"
 ***********************************************************************************************************************/
 /* New variables */
-volatile u8 G_u8UserAppFlags;                             /*!< @brief Global state flags */
+volatile u8 G_u8UserAppFlags;                             
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-/* Existing variables (defined in other files -- should all contain the "extern" keyword) */
-extern volatile u32 G_u32SystemTime1ms;                   /*!< @brief From main.c */
-extern volatile u32 G_u32SystemTime1s;                    /*!< @brief From main.c */
-extern volatile u32 G_u32SystemFlags;                     /*!< @brief From main.c */
+
+extern volatile u32 G_u32SystemTime1ms;                   
+extern volatile u32 G_u32SystemTime1s;                    
+extern volatile u32 G_u32SystemFlags;                     
 
 
 /***********************************************************************************************************************
@@ -93,10 +93,8 @@ Promises:
 */
 void UserAppInitialize(void)
 {
-    //Enabling timer0 in 16-bit mode with a post-scaler value of 1:1
     T0CON0 = 0x90;
     
-    //Setting timer0 to asynchronous. mode with (Fosc/4) as the source with a pre-scaler of 1:16
     T0CON1 = 0x54;
    
 } /* end UserAppInitialize() */
@@ -117,7 +115,6 @@ Promises:
 void UserAppRun(void)
 {
     static u8 u8vect = 0;
-    //Allowing for u8ArrayIndex to overflow back to zero after 255
     DAC1DATL = UserApp_au8SineTable[u8vect+=4];
     
 } /* end UserAppRun */
@@ -140,17 +137,15 @@ Promises:
 
 void TimeXus(u16 u16cycle)
 {
-    T0CON0 &= 0x7F; //Disabling timer0
+    T0CON0 &= 0x7F; 
     
-    TMR0H = (0xFFFF - u16cycle) >> 8; /*Right shifting upper 8 bits of u16TimerTime 
-                               to fit in 8-bit TMR0H*/ 
+    TMR0H = (0xFFFF - u16cycle) >> 8;  
     
-    //Pre-loading TMR0L/H based on passed u16TimerTime
-    TMR0L = (0xFFFF - u16cycle) & 0x00FF; /*Taking only the lower 8 bits of u16TimerTime
-                                               for TMR0L*/  
     
-    PIR3 &= 0x7F; //Clearing the TMR0IF flag
-    T0CON0 |= 0x80; //Enabling timer0
+    TMR0L = (0xFFFF - u16cycle) & 0x00FF;   
+    
+    PIR3 &= 0x7F; 
+    T0CON0 |= 0x80; 
     
     
 }  /* end TimeXus () */

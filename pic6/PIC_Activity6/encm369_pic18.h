@@ -33,16 +33,16 @@ Type Definitions
 #define SYS_FREQ                  (u32)64000000
 #define FCY                       SYS_FREQ/4
 
-#define OSC_VALUE                 (u32)64000000                              /*!< @brief Internal oscillator value */
-#define MAINCK                    OSC_VALUE/4                                /*!< @brief Main clock is base frequency / 4 */
+#define OSC_VALUE                 (u32)64000000                              
+#define MAINCK                    OSC_VALUE/4                                
 
 
 
 /***********************************************************************************************************************
 * Macros
 ***********************************************************************************************************************/
-#define HEARTBEAT_ON()          (LATA |= 0x80)  /*!< @brief Turns on Heartbeat LED */
-#define HEARTBEAT_OFF()         (LATA &= 0x7F)  /*!< @brief Turns off Heartbeat LED */
+#define HEARTBEAT_ON()          (LATA |= 0x80)  
+#define HEARTBEAT_OFF()         (LATA &= 0x7F)  
 
 
 /***********************************************************************************************************************
@@ -109,10 +109,7 @@ void SystemSleep(void);
 ##### GPIO setup values
 ***********************************************************************************************************************/
 
-/* TRISA Register: 
-0: Pin is and output
-1: Pin is high-impedance input
-*/
+
 #define TRISA_INIT (u8)0x007
 /* 
     07 [0] PA_07_
