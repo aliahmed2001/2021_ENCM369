@@ -84,25 +84,20 @@ PIC18F27Q43 Configuration Bit Settings
 Includes
 ***********************************************************************************************************************/
 #if defined(__XC)
-    #include <xc.h>         /* XC8 General Include File */
+    #include <xc.h>         
 #elif defined(HI_TECH_C)
-    #include <htc.h>        /* HiTech General Include File */
+    #include <htc.h>        
 #elif defined(__18CXX)
-    #include <p18cxxx.h>    /* C18 General Include File */
+    #include <p18cxxx.h>    
 #endif
 
-/* Common header files */
 #include <stdint.h>
 #include <stdbool.h>
 #include "typedefs.h"
 #include "main.h"
 
-/* ENCM 369 Activities specific header files */
 #include "encm369_pic18.h"
 
-/* Common driver header files */
-
-/* Common application header files */
 #include "user_app.h"
 
 

@@ -17,8 +17,8 @@
 
 
 /* G_u32SystemFlags */
-#define _SYSTEM_SLEEPING                (u32)0x40000000   /*!< G_u32SystemFlags set into sleep mode to go back to sleep if woken before 1ms period */
-#define _SYSTEM_INITIALIZING            (u32)0x80000000   /*!< G_u32SystemFlags set when system is in initialization phase */
+#define _SYSTEM_SLEEPING                (u32)0x40000000   
+#define _SYSTEM_INITIALIZING            (u32)0x80000000   
 /* end G_u32SystemFlags */
 
 

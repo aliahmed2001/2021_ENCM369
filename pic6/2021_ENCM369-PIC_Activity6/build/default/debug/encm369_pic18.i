@@ -27230,9 +27230,8 @@ unsigned char __t3rd16on(void);
 
 
 
-
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2_31\\pic\\include\\c99\\stdbool.h" 1 3
-# 97 "./configuration.h" 2
+# 96 "./configuration.h" 2
 # 1 "./typedefs.h" 1
 # 31 "./typedefs.h"
 typedef char CHAR;
@@ -27271,10 +27270,9 @@ typedef void(*fnCode_u16_type)(u16 x);
 
 
 typedef enum {ACTIVE_LOW = 0, ACTIVE_HIGH = 1} GpioActiveType;
-# 98 "./configuration.h" 2
+# 97 "./configuration.h" 2
 # 1 "./main.h" 1
-# 99 "./configuration.h" 2
-
+# 98 "./configuration.h" 2
 
 # 1 "./encm369_pic18.h" 1
 # 60 "./encm369_pic18.h"
@@ -27283,17 +27281,14 @@ void GpioSetup(void);
 
 void SysTickSetup(void);
 void SystemSleep(void);
-# 102 "./configuration.h" 2
-
-
-
+# 100 "./configuration.h" 2
 
 # 1 "./user_app.h" 1
 # 27 "./user_app.h"
 void UserAppInitialize(void);
 void UserAppRun(void);
 void TimeXus(u16 u16cycle);
-# 107 "./configuration.h" 2
+# 102 "./configuration.h" 2
 # 25 "encm369_pic18.c" 2
 # 37 "encm369_pic18.c"
 extern volatile u32 G_u32SystemTime1ms;

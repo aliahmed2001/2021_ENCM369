@@ -61,7 +61,7 @@ void main(void)
     SystemSleep();
     
     TimeXus(11); 
-    while ( PIR3bits.TMR0IF == 0);   //this shit right hererere
+    while ( PIR3bits.TMR0IF == 0);  
     HEARTBEAT_ON();
 #endif
   } /* end while(1) main super loop */
