@@ -239,7 +239,7 @@ void UserAppRun(void)
 {
     static u16 u16counter = 0; 
     static u8  u8Index = 0;               
-          
+    //notes and duration for those notes for twinkle twinkle little star      
     u16 au16Note[] = {
         C4,NN,C4,NN,G4,NN,G4,NN,A4,NN,A4,NN,G4,NN,
         F4,NN,F4,NN,E4,NN,E4,NN,D4,NN,D4,NN,C4,NN,
@@ -260,11 +260,11 @@ void UserAppRun(void)
     if (u16counter == au16Duration[u8Index])  
     {
         u16counter=0;
-        if (u8Index == 84)             
+        if (u8Index == 84)          //array ends   
         {
-            u8Index = 0;      
+            u8Index = 0;            //start from the beginning 
         }
-        u8Index++;                          
+        u8Index++;                        
         
         InterruptTimerXus(au16Note[u8Index],true);
     }
