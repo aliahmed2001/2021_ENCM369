@@ -237,9 +237,41 @@ Promises:
 */
 void UserAppRun(void)
 {
-
-  
+//NOTES 
+    static u16 u16counter = 0; 
+    static u8  u8Index = 0;               // Array of notes index 
+          
+    u16 au16Note[] = {
+        C4,NN,C4,NN,G4,NN,G4,NN,A4,NN,A4,NN,G4,NN,
+        F4,NN,F4,NN,E4,NN,E4,NN,D4,NN,D4,NN,C4,NN,
+        G4,NN,G4,NN,F4,NN,F4,NN,E4,NN,E4,NN,D4,NN,
+        G4,NN,G4,NN,F4,NN,F4,NN,E4,NN,E4,NN,D4,NN,
+        C4,NN,C4,NN,G4,NN,G4,NN,A4,NN,A4,NN,G4,NN,
+        F4,NN,F4,NN,E4,NN,E4,NN,D4,NN,D4,NN,C4,NN
+    };
+    u16 au16Duration[] = {
+        N4,RT,N4,RT,N4,RT,N4,RT,N4,RT,N4,RT,N2,RT,
+        N4,RT,N4,RT,N4,RT,N4,RT,N4,RT,N4,RT,N2,RT,
+        N4,RT,N4,RT,N4,RT,N4,RT,N4,RT,N4,RT,N2,RT,
+        N4,RT,N4,RT,N4,RT,N4,RT,N4,RT,N4,RT,N2,RT,
+        N4,RT,N4,RT,N4,RT,N4,RT,N4,RT,N4,RT,N2,RT,
+        N4,RT,N4,RT,N4,RT,N4,RT,N4,RT,N4,RT,N2,RT
+    };
+    
+    if (u16counter == au16Duration[u8Index])  
+    {
+        u16counter=0;
+        if (u8Index == 84)             //If end of array is reached
+        {
+            u8Index = 0;      //Repeat song (back to index 0)
+        }
+        u8Index++;                      //Increment index to the next note    
+        
+        InterruptTimerXus(au16Note[u8Index],true);
+    }
+    u16counter++;  
 } /* end UserAppRun() */
+
 
 
 
