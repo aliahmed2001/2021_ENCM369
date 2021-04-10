@@ -237,9 +237,8 @@ Promises:
 */
 void UserAppRun(void)
 {
-//NOTES 
     static u16 u16counter = 0; 
-    static u8  u8Index = 0;               // Array of notes index 
+    static u8  u8Index = 0;               
           
     u16 au16Note[] = {
         C4,NN,C4,NN,G4,NN,G4,NN,A4,NN,A4,NN,G4,NN,
@@ -261,17 +260,16 @@ void UserAppRun(void)
     if (u16counter == au16Duration[u8Index])  
     {
         u16counter=0;
-        if (u8Index == 84)             //If end of array is reached
+        if (u8Index == 84)             
         {
-            u8Index = 0;      //Repeat song (back to index 0)
+            u8Index = 0;      
         }
-        u8Index++;                      //Increment index to the next note    
+        u8Index++;                          
         
         InterruptTimerXus(au16Note[u8Index],true);
     }
     u16counter++;  
 } /* end UserAppRun() */
-
 
 
 

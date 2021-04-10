@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Fri Apr 09 23:19:57 2021
+                                                                                               Fri Apr 09 23:23:25 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	18F27Q43
@@ -889,8 +889,8 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    855  000356                     _UserAppRun:
    856                           	callstack 124
    857  000356                     
-   858                           ;user_app.c: 241:     static u16 u16counter = 0;;user_app.c: 242:     static u8 u8Index 
-      +                          = 0;;user_app.c: 244:     u16 au16Note[] = {
+   858                           ;user_app.c: 240:     static u16 u16counter = 0;;user_app.c: 241:     static u8 u8Index 
+      +                          = 0;;user_app.c: 243:     u16 au16Note[] = {
    859  000356  EE22  F000         	lfsr	2,UserAppRun@F15951
    860  00035A  EE11  F200         	lfsr	1,UserAppRun@au16Note
    861  00035E  0EA7               	movlw	167
@@ -902,7 +902,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    867  00036A  5ED9               	subwf	fsr2l,f,c
    868  00036C  5EE1               	subwf	fsr1l,f,c
    869                           
-   870                           ;user_app.c: 252:     u16 au16Duration[] = {
+   870                           ;user_app.c: 251:     u16 au16Duration[] = {
    871  00036E  EE22  F100         	lfsr	2,UserAppRun@F15953
    872  000372  EE11  F300         	lfsr	1,UserAppRun@au16Duration
    873  000376  0EA7               	movlw	167
@@ -914,7 +914,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    879  000382  5ED9               	subwf	fsr2l,f,c
    880  000384  5EE1               	subwf	fsr1l,f,c
    881  000386                     
-   882                           ;user_app.c: 261:     if (u16counter == au16Duration[u8Index])
+   882                           ;user_app.c: 260:     if (u16counter == au16Duration[u8Index])
    883  000386  0106               	movlb	6	; () banked
    884  000388  51AA               	movf	UserAppRun@u8Index& (0+255),w,b
    885  00038A  0D02               	mullw	2
@@ -937,14 +937,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    902  0003B0                     u140:
    903  0003B0                     
    904                           ; BSR set to: 6
-   905                           ;user_app.c: 262:     {;user_app.c: 263:         u16counter=0;
+   905                           ;user_app.c: 261:     {;user_app.c: 262:         u16counter=0;
    906  0003B0  0E00               	movlw	0
    907  0003B2  6FA9               	movwf	(UserAppRun@u16counter+1)& (0+255),b
    908  0003B4  0E00               	movlw	0
    909  0003B6  6FA8               	movwf	UserAppRun@u16counter& (0+255),b
    910  0003B8                     
    911                           ; BSR set to: 6
-   912                           ;user_app.c: 264:         if (u8Index == 84)
+   912                           ;user_app.c: 263:         if (u8Index == 84)
    913  0003B8  0E54               	movlw	84
    914  0003BA  19AA               	xorwf	UserAppRun@u8Index& (0+255),w,b
    915  0003BC  A4D8               	btfss	status,2,c
@@ -955,17 +955,17 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    920  0003CA                     u150:
    921  0003CA                     
    922                           ; BSR set to: 6
-   923                           ;user_app.c: 265:         {;user_app.c: 266:             u8Index = 0;
+   923                           ;user_app.c: 264:         {;user_app.c: 265:             u8Index = 0;
    924  0003CA  0E00               	movlw	0
    925  0003CC  6FAA               	movwf	UserAppRun@u8Index& (0+255),b
    926  0003CE                     l1051:
    927                           
    928                           ; BSR set to: 6
-   929                           ;user_app.c: 268:         u8Index++;
+   929                           ;user_app.c: 267:         u8Index++;
    930  0003CE  2BAA               	incf	UserAppRun@u8Index& (0+255),f,b
    931  0003D0                     
    932                           ; BSR set to: 6
-   933                           ;user_app.c: 270:         InterruptTimerXus(au16Note[u8Index],1);
+   933                           ;user_app.c: 269:         InterruptTimerXus(au16Note[u8Index],1);
    934  0003D0  51AA               	movf	UserAppRun@u8Index& (0+255),w,b
    935  0003D2  0D02               	mullw	2
    936  0003D4  0E00               	movlw	low UserAppRun@au16Note
@@ -981,7 +981,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    946  0003F0  EC45  F002         	call	_InterruptTimerXus	;wreg free
    947  0003F4                     l1055:
    948                           
-   949                           ;user_app.c: 272:     u16counter++;
+   949                           ;user_app.c: 271:     u16counter++;
    950  0003F4  0106               	movlb	6	; () banked
    951  0003F6  4BA8               	infsnz	UserAppRun@u16counter& (0+255),f,b
    952  0003F8  2BA9               	incf	(UserAppRun@u16counter+1)& (0+255),f,b
@@ -3325,7 +3325,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Fri Apr 09 23:19:57 2021
+Symbol Table                                                                                   Fri Apr 09 23:23:25 2021
 
               ??_InterruptSetup 0512           __size_of_SysTickSetup 0034               _InterruptTimerXus 048A  
                             l30 05CA                              l33 054C                              l27 0600  

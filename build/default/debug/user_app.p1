@@ -3043,14 +3043,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _UserAppRun ]
 [f ]
-"241
-[; ;user_app.c: 241:     static u16 u16counter = 0;
+"240
+[; ;user_app.c: 240:     static u16 u16counter = 0;
 [v F15949 `us ~T0 @X0 1 s u16counter ]
 [i F15949
 -> -> 0 `i `us
 ]
-"242
-[; ;user_app.c: 242:     static u8 u8Index = 0;
+"241
+[; ;user_app.c: 241:     static u8 u8Index = 0;
 [v F15950 `uc ~T0 @X0 1 s u8Index ]
 [i F15950
 -> -> 0 `i `uc
@@ -3058,8 +3058,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F15951 `us ~T0 @X0 -> 84 `i s ]
 [i F15951
 :U ..
-"244
-[; ;user_app.c: 244:     u16 au16Note[] = {
+"243
+[; ;user_app.c: 243:     u16 au16Note[] = {
 -> -> 60 `i `us
 -> -> 0 `i `us
 -> -> 60 `i `us
@@ -3151,8 +3151,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F15953 `us ~T0 @X0 -> 84 `i s ]
 [i F15953
 :U ..
-"252
-[; ;user_app.c: 252:     u16 au16Duration[] = {
+"251
+[; ;user_app.c: 251:     u16 au16Duration[] = {
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
 -> -> 50 `i `us
 -> / -> -> -> 2048 `i `us `ui -> -> 4 `i `ui `us
@@ -3241,42 +3241,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 [v _au16Duration `us ~T0 @X0 -> 84 `i a ]
 [e = _au16Duration F15953 ]
-"261
-[; ;user_app.c: 261:     if (u16counter == au16Duration[u8Index])
+"260
+[; ;user_app.c: 260:     if (u16counter == au16Duration[u8Index])
 [e $ ! == -> F15949 `ui -> *U + &U _au16Duration * -> F15950 `ux -> -> # *U &U _au16Duration `ui `ux `ui 2278  ]
+"261
+[; ;user_app.c: 261:     {
+{
 "262
-[; ;user_app.c: 262:     {
-{
-"263
-[; ;user_app.c: 263:         u16counter=0;
+[; ;user_app.c: 262:         u16counter=0;
 [e = F15949 -> -> 0 `i `us ]
-"264
-[; ;user_app.c: 264:         if (u8Index == 84)
+"263
+[; ;user_app.c: 263:         if (u8Index == 84)
 [e $ ! == -> F15950 `i -> 84 `i 2279  ]
-"265
-[; ;user_app.c: 265:         {
+"264
+[; ;user_app.c: 264:         {
 {
-"266
-[; ;user_app.c: 266:             u8Index = 0;
+"265
+[; ;user_app.c: 265:             u8Index = 0;
 [e = F15950 -> -> 0 `i `uc ]
-"267
-[; ;user_app.c: 267:         }
+"266
+[; ;user_app.c: 266:         }
 }
 [e :U 2279 ]
-"268
-[; ;user_app.c: 268:         u8Index++;
+"267
+[; ;user_app.c: 267:         u8Index++;
 [e ++ F15950 -> -> 1 `i `uc ]
-"270
-[; ;user_app.c: 270:         InterruptTimerXus(au16Note[u8Index],1);
+"269
+[; ;user_app.c: 269:         InterruptTimerXus(au16Note[u8Index],1);
 [e ( _InterruptTimerXus (2 , *U + &U _au16Note * -> F15950 `ux -> -> # *U &U _au16Note `ui `ux -> -> 1 `i `a ]
-"271
-[; ;user_app.c: 271:     }
+"270
+[; ;user_app.c: 270:     }
 }
 [e :U 2278 ]
-"272
-[; ;user_app.c: 272:     u16counter++;
+"271
+[; ;user_app.c: 271:     u16counter++;
 [e ++ F15949 -> -> 1 `i `us ]
-"273
-[; ;user_app.c: 273: }
+"272
+[; ;user_app.c: 272: }
 [e :UE 2277 ]
 }

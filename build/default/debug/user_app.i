@@ -27466,7 +27466,6 @@ void UserAppInitialize(void)
 # 238 "user_app.c"
 void UserAppRun(void)
 {
-
     static u16 u16counter = 0;
     static u8 u8Index = 0;
 
